@@ -1,8 +1,10 @@
 import React from 'react'
 import Button from '../Components/Button'
 import video from "../assets/cleaning-2333.mp4"
+import OurServices from '../Components/OurServices'
 const Home = () => {
   return (
+   <> 
       <div className="relative">
         <video src={video} autoPlay loop muted className='h-[90vh] w-full object-cover'></video>
         <div className="overlay h-full w-full absolute left-0 top-0 bg-black"></div>
@@ -29,6 +31,8 @@ const Home = () => {
             </div>
         </div>
       </div>
+      <OurServices/>
+   </>
   )
 }
 
