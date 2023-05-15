@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .primary-btn {
+    @apply px-16 py-[14px] rounded-3xl text-base
+  }
+  .container {
+    @apply w-9/12 mx-auto
+  }
+}
