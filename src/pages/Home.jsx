@@ -12,9 +12,9 @@ const Home = () => {
   return (
    <> 
       <div className="relative lg:h-full">
-        <video src={video} autoPlay loop muted className='h-[90vh] w-full object-cover'></video>
+        <video src={video} autoPlay loop muted className=' h-[130vh] lg:h-[90vh] w-full object-cover'></video>
         <div className="overlay h-full w-full absolute left-0 top-0 bg-black"></div>
-        <div className="container absolute top-[70%] lg:top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex flex-col lg:flex-row justify-between">
+        <div className="container absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex flex-col lg:flex-row justify-between">
             <div className="lg:w-2/5">
                 <h1 className='text-white text-4xl lg:text-6xl'>We are your roofing partner</h1>
                 <p className='text-white text-sm lg:text-base  my-9 w-4/5'>We follow rigorous procedures, developed by leading international manufacturers, to ensure the very best roof installation. We use the latest technology to ensure top quality service from start to finish. You're able to track and view the process every step of the way.</p>

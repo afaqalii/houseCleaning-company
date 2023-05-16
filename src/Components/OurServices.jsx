@@ -14,7 +14,7 @@ const OurServices = () => {
         )
     })
   return (
-    <div className='grid place-content-center py-32'>
+    <div className='grid place-content-center py-16 lg:py-32'>
      <div className="container text-center">
         <h1 className='text-dark-grey text-3xl'>Our Services</h1>
         <div className="flex flex-col lg:flex-row gap-5">
