@@ -14,13 +14,15 @@ const OurServices = () => {
         )
     })
   return (
-    <div className=''>
+    <div className='grid place-content-center py-32'>
      <div className="container text-center">
         <h1 className='text-dark-grey text-3xl'>Our Services</h1>
-        <div className="flex gap-5">
+        <div className="flex flex-col lg:flex-row gap-5">
             {OurServices}
         </div>
-        <Button content={"See All Services"} bg={"orange"} color={"white"}/>
+        <div className="mt-20">
+            <Button content={"See All Services"} bg={"orange"} color={"white"}/>
+        </div>
      </div>
     </div>
   )

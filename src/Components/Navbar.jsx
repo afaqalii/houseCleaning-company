@@ -1,34 +1,44 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Button from './Button'
 import { menuItems } from '../data'
 
 
-const Navbar = () => {
-    // a div with 3 sections logo  menu items and CTA logo sze is 215px
-    // navbar padding -x is 50px menu items p-x is 15 py 6.8 mt- is 21
+const Navbar = ({children}) => {
+
+    const [toggleMenu, setToggleMenu] = useState(false)
+    
     const MenuItems = menuItems.map((item) => {
         return ( 
-            <li className='px-4'>
+            <li className='relative py-5 text-dark-grey w-full text-left p-8 lg:px-4 after:absolute after:w-[15%] after:h-[2px] after:bottom-[-40px] after:left-[30px]  after:bg-orange after:mb-10 lg:after:w-0'>
                 <a href="#">{item}</a>      
             </li>
         )
     })
+ 
   return (
     <div className='flex justify-between items-center py-8 px-12'>
         {/* navbar logo */}
         <div className="w-[215px]">
             <img src="https://irp.cdn-website.com/md/dmtmpl/824fd22d-0590-4ecc-a120-4e867939e215/dms3rep/multi/Logo-861d487a.svg" alt="" />
-        </div>
+        </div>  
         {/* MENU ITEMS */}
-        <div className="w-[50%]">
-           <ul className='flex items-center justify-start'>
+        <div className={`${toggleMenu ? 'absolute top-[105px] left-0 bg-white z-10' : 'hidden' }   w-full  lg:w-[50%] lg:flex `}>
+           <ul className={`${toggleMenu ? 'flex-col text-left': 'flex-row'} flex items-center justify-start pb-5 lg:pb-0`}>
             {MenuItems}
            </ul>
         </div>
+        {/* MENU ITEMS FOR small screens */}
+        <div className=""></div>
         {/* CTA */}
-       <div className="'">
-          <Button content={"Get a free Estimate"} color={'orange'}/>
+       <div className='hidden lg:flex'>
+          {children}
        </div>
+     {/* menu Icons for small screen */}
+     <div className={`navbar-toggler  flex flex-col gap-1 lg:hidden`} onClick={() => setToggleMenu(prevState => !prevState)} >
+        <span className={` ${toggleMenu ? 'active': ''} h-1 ease-in duration-300 bg-dark-grey w-8`}></span>
+        <span className={` ${toggleMenu ? 'active': ''} h-1 ease-in duration-300 bg-dark-grey w-8`}></span>
+        <span className={` ${toggleMenu ? 'active': ''} h-1 ease-in duration-300 bg-dark-grey w-8`}></span>
+     </div>
     </div>
   )
 }

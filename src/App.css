@@ -4,5 +4,15 @@
 }
 
 .overlay {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.4);
 }
+
+.navbar-toggler span.active:nth-child(1) {
+    transform: translateY(4px) rotate(45deg);
+  }
+  .navbar-toggler span.active:nth-child(2) {
+    transform: translateY(-4px) rotate(45deg);
+  }
+  .navbar-toggler span.active:nth-child(3) {
+    transform: translateY(-12px) rotate(-45deg);
+  }
