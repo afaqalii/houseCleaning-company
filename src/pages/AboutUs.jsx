@@ -35,7 +35,7 @@ const AboutUs = () => {
         </div>
     </div>
     <WhyUs/>
-    <Testimonials/>
+    {/* <Testimonials/> */}
     <CallToAction/>
     </>
   )
