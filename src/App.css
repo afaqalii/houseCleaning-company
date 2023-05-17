@@ -16,3 +16,10 @@
   .navbar-toggler span.active:nth-child(3) {
     transform: translateY(-12px) rotate(-45deg);
   }
+
+  .about-us-bg {
+    background-image: url("./assets/bg-shingle.jpg");
+  }
+  .about-us-content {
+    background-color: rgba(0, 0, 0, 0.5);
+  }

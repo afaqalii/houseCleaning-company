@@ -1,21 +1,20 @@
 import React, { useEffect, useState } from 'react'
 import Button from './Button'
 import { menuItems } from '../data'
+import { Link } from 'react-router-dom'
 
 
 const Navbar = ({children, show}) => {
 
     const [toggleMenu, setToggleMenu] = useState(false)
-    console.log(show)
     const MenuItems = menuItems.map((item) => {
         return ( 
             <li className='relative py-5 p-8 lg:px-4 w-full whitespace-nowrap text-dark-grey  text-left  after:absolute after:w-[15%] after:h-[2px] after:bottom-[-40px] after:left-[30px]  after:bg-orange after:mb-10 lg:after:w-0'>
-                <a href="#">{item}</a>      
+                <Link to={`/${item}`} >{item}</Link>      
             </li>
         )
     })
-     console.log(show)
-  return (
+      return (
     <div className='flex justify-between items-center py-8 px-5 lg:px-12'>
         {/* navbar logo */}
         <div className="w-[215px]">

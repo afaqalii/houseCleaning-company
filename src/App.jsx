@@ -5,6 +5,10 @@ import Home from './pages/Home'
 import Button from './Components/Button'
 import Icons from './Components/Icons'
 import { useEffect, useState } from 'react'
+import OurServices from './pages/OurServices'
+import AboutUs from './pages/AboutUs'
+import NewAndBlog from './pages/NewAndBlog'
+import ContactUs from './pages/ContactUs'
 
 function App() {
     const [showNavbar, setShowNavbar] = useState(null)
@@ -28,6 +32,10 @@ function App() {
     <Navbar show={showNavbar}/>
      <Routes>
        <Route path='/' element={<Home/>}/>
+       <Route path='/services' element={<OurServices/>}/>
+       <Route path='/about' element={<AboutUs/>}/>
+       <Route path='/news & blog' element={<NewAndBlog/>}/>
+       <Route path='/contact' element={<ContactUs/>}/>
      </Routes>
      <Navbar children={<Icons/>} show={showFooter}  />
     </BrowserRouter>
