@@ -13,7 +13,7 @@ import Footer from './Components/Footer'
 
 function App() {
     const [showNavbar, setShowNavbar] = useState(null)
-
+    
     useEffect(() => {
       window.innerWidth >= 1024 ?  setShowNavbar(false) :  setShowNavbar(true)
       const handleScreenSize = () => {

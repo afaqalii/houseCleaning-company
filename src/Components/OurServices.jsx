@@ -1,6 +1,7 @@
 import React from 'react'
 import { ourServices } from '../data'
 import Button from './Button'
+import { Link } from 'react-router-dom'
 
 const OurServices = () => {
     const OurServices = ourServices.map((service) => {
@@ -21,7 +22,7 @@ const OurServices = () => {
             {OurServices}
         </div>
         <div className="mt-20">
-            <Button content={"See All Services"} bg={"orange"} color={"white"}/>
+           <Link to={`/services`}><Button content={"See All Services"} bg={"orange"} color={"white"}/></Link>
         </div>
      </div>
     </div>

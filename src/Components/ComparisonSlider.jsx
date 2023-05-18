@@ -36,7 +36,7 @@ export const ComparisonSlider = ({ style, ...props }) => {
         style={{
           ...style
         }}
-        className="flex w-full h-[80vh]"
+        className="flex w-full h-[50vh] md:h-[80vh]"
       />
     );
   };

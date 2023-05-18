@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from './Button'
-import civilEng from "../assets/civil-eng.jpg"
 import { ComparisonSlider } from './ComparisonSlider'
+import { Link } from 'react-router-dom'
 const OurWork = () => {
   return (
     <div className='py-32'>
@@ -11,7 +11,9 @@ const OurWork = () => {
                 <ComparisonSlider/>
             </div>
            <div>
-           <Button content={"See All Projects"} color={"white"} bg={"orange"} />
+          <Link to='/services'>
+            <Button content={"See All Projects"} color={"white"} bg={"orange"} />
+          </Link> 
            </div>
         </div>
     </div>

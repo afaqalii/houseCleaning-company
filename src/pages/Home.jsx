@@ -8,6 +8,7 @@ import Testimonials from '../Components/Testimonials'
 import OurWork from '../Components/OurWork'
 import NewsBlog from '../Components/NewsBlog'
 import CallToAction from '../Components/CallToAction'
+import { Link } from 'react-router-dom'
 const Home = () => {
   return (
    <> 
@@ -18,7 +19,7 @@ const Home = () => {
             <div className="lg:w-2/5">
                 <h1 className='text-white text-4xl lg:text-6xl'>We are your roofing partner</h1>
                 <p className='text-white text-sm lg:text-base  my-9 w-4/5'>We follow rigorous procedures, developed by leading international manufacturers, to ensure the very best roof installation. We use the latest technology to ensure top quality service from start to finish. You're able to track and view the process every step of the way.</p>
-                <Button content={"Get a free estimate"} color={"white"} />
+               <Link to={`/contact`}><Button content={"Get a free estimate"} color={"white"} /></Link>
             </div>
             <div className="mt-5 lg:mr-[12rem]">
                 <div className="relative flex flex-col after:absolute after:w-full after:h-[2px] after:bottom-0 after:left-0  after:bg-orange after:mb-10">
