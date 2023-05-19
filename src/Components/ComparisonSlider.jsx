@@ -22,14 +22,13 @@ export const ComparisonSlider = ({ style, ...props }) => {
         }
         itemOne={
           <ReactCompareSliderImage
-            src="https://images.unsplash.com/photo-1580458148391-8c4951dc1465?auto=format&fit=crop&w=1280&q=80"
-            style={{ filter: "grayscale(1)" }}
+            src="https://www.communityroofingandrestoration.com/wp-content/uploads/2020/11/old-roof-and-windows.jpg"
             alt="one"
           />
         }
         itemTwo={
           <ReactCompareSliderImage
-            src="https://images.unsplash.com/photo-1580458148391-8c4951dc1465?auto=format&fit=crop&w=1280&q=80"
+            src="https://www.iko.com/blog/wp-content/uploads/sites/10/2022/12/roof-with-dormers-and-shingles.webp"
             alt="two"
           />
         }
