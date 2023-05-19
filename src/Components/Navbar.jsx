@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Button from './Button'
 import { menuItems } from '../data'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import logo from "../assets/logo.svg"
 
 const Navbar = ({show}) => {
@@ -13,10 +13,10 @@ const Navbar = ({show}) => {
        window.scrollTo(0,0)
     },[location])
 
-    const MenuItems = menuItems.map((item) => {
+    const MenuItems = menuItems.map((item, index) => {
         return ( 
-            <li className='relative py-5 p-8 lg:px-4  whitespace-nowrap  lg:after:w-0'>
-                <Link to={`/${item}`} >{item}</Link>      
+            <li key={index} className='relative py-5 p-8 lg:px-4  whitespace-nowrap  lg:after:w-0'>
+                <NavLink to={`/${item}`} >{item}</NavLink>      
             </li>
         )
     })
